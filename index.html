@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Virtual Piano</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        body {
+            background-color: bisque;
+            width: 100vw;
+            height: 100vw;
+            text-align: center;
+            justify-content: center;
+            position: center;
+
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            top: 450px;
+            right: -50px;
+        }
+
+        .white-keys kbd {
+            width: 50px;
+            height: 100px;
+            border: darkslategrey 1px solid;
+            border-radius: 5px;
+            background-color: white;
+            font-size: 18px;
+            font-family: 'Ropa Sans', sans-serif;
+            color: #3a3a3a;
+            margin-left: -5px;
+            line-height: 150px;
+            display: inline-block;
+        }
+
+        .black-keys kbd {
+            width: 25px;
+            /*height: 60px;*/
+            background-color: black;
+            font-size: 14px;
+            font-family: 'Ropa Sans', sans-serif;
+            color: white;
+            line-height: 60px;
+            display: inline-block;
+            z-index: 2;
+            position: relative;
+        }
+
+        #W {
+            left: -320px;
+        }
+        #E {
+            left: -298px;
+        }
+        #T {
+            left: -225px;
+        }
+        #Y {
+            left: -202px;
+        }
+        #U {
+            left: -180px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="keyboard">
+        <div class="white-keys">
+            <kbd class="key">A</kbd>
+            <kbd class="key">S</kbd>
+            <kbd class="key">D</kbd>
+            <kbd class="key">F</kbd>
+            <kbd class="key">G</kbd>
+            <kbd class="key">H</kbd>
+            <kbd class="key">J</kbd>
+        </div>
+
+        <div class="black-keys">
+            <kbd class="key-left" id="W">W</kbd>
+            <kbd class="key-left" id="E">E</kbd>
+            <kbd class="key-right" id="T">T</kbd>
+            <kbd class="key-right" id="Y">Y</kbd>
+            <kbd class="key-right" id="U">U</kbd>
+        </div>
+
+    </div>
+<script>
+    document.addEventListener("keydown", function (event1) {
+        if (event1.code === "KeyA"){
+            // console.log("The 'A' key is pressed.");
+            let audio = new Audio("white_keys/A.mp3");
+            audio.play();
+        }
+        else if (event1.code === "KeyS"){
+            // console.log("The 'S' key is pressed.");
+            let audio = new Audio("white_keys/S.mp3");
+            audio.play();
+        }
+        else if (event1.code === "KeyD"){
+            // console.log("The 'D' key is pressed.");
+            let audio = new Audio("white_keys/D.mp3");
+            audio.play();
+        }
+        else if (event1.code === "KeyF"){
+            // console.log("The 'F' key is pressed.");
+            let audio = new Audio("white_keys/F.mp3");
+            audio.play();
+        }
+        else if (event1.code === "KeyG"){
+            // console.log("The 'G' key is pressed.");
+            let audio = new Audio("white_keys/G.mp3");
+            audio.play();
+        }
+        else if (event1.code === "KeyH"){
+            // console.log("The 'H' key is pressed.");
+            let audio = new Audio("white_keys/H.mp3");
+            audio.play();
+        }
+        else if (event1.code === "KeyJ"){
+            // console.log("The 'J' key is pressed.");
+            let audio = new Audio("white_keys/J.mp3");
+            audio.play();
+        }
+        else if (event1.code === "KeyW"){
+            // console.log("The 'W' key is pressed.");WW
+            let audio = new Audio("black-keys/W.mp3");
+            audio.play();
+        }
+        else if (event1.code === "KeyE"){
+            // console.log("The 'E' key is pressed.");
+            let audio = new Audio("black-keys/E.mp3");
+            audio.play();
+        }
+        else if (event1.code === "KeyT"){
+            // console.log("The 'T' key is pressed.");
+            let audio = new Audio("black-keys/T.mp3");
+            audio.play();
+        }
+        else if (event1.code === "KeyY"){
+            // console.log("The 'Y' key is pressed.");
+            let audio = new Audio("black-keys/Y.mp3");
+            audio.play();
+        }
+        else if (event1.code === "KeyU"){
+            // console.log("The 'U' key is pressed.");
+            let audio = new Audio("black-keys/U.mp3");
+            audio.play();
+        }
+        else{
+            // console.log("Error");
+        }
+    });
+</script>
+</body>
+</html>
